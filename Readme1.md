@@ -1,29 +1,25 @@
-# Sistem Arsip Budaya Lokal
-**Pemanfaatan Bash Script untuk Pengarsipan dan Perlindungan Data Budaya Lokal dengan Digital Signature di Sistem Operasi Linux**
-Skrip bash ini berfungsi untuk mengelola arsip budaya lokal dengan fitur otentikasi pengguna, penambahan, verifikasi, dan penghapusan data budaya menggunakan *digital signature* berbasis algoritma DSA. Skrip ini menggunakan *Zenity* untuk antarmuka grafis dan *OpenSSL* untuk keamanan. Skrip ini hanya dapat dijalankan pada sistem operasi Linux berbasis Debian (seperti Ubuntu) yang memiliki *desktop environment* (non-headless).
+# Sistem Arsip Budaya Lokal Berbasis Linux Bash Shell
+**Perlindungan Arsip Digital Budaya Lokal Menggunakan Bash Shell Linux untuk Keamanan dan Pelestarian Warisan**
+Skrip bash ini berfungsi untuk mengelola arsip budaya lokal dengan fitur otentikasi pengguna, verifikasi, penambahan, dan penghapusan data budaya menggunakan *digital signature* berbasis algoritma DSA. Skrip ini menggunakan *Zenity* untuk antarmuka grafis dan *OpenSSL* untuk keamanan. Skrip ini hanya dapat dijalankan pada sistem operasi Linux.
 
-Skrip ini dibuat untuk memenuhi tugas kelompok proyek mata kuliah **Sistem Operasi Jaringan** Semester 2, Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada.
+Skrip ini dibuat untuk memenuhi tugas kelompok proyek mata kuliah **Sistem Operasi Jaringan** Semester 2, Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada di bawah pengawasan Dosen Pengampu **Ir. Yuris Mulya Saputra, S.T., M.Sc., Ph.D.**
 
 ## Prosedur Penggunaan
-1. Kloning branch `main` repositori ini ke komputer dengan sistem operasi berbasis Debian:
+1. Install `zenity` dan `openssl`
    ```bash
-   git clone https://github.com/username/sistem-arsip-budaya.git --branch=main
+   sudo apt-get install zenity openssl
    ```
-2. Pindah *working directory* ke folder skrip:
+2. Pindah *working directory* ke [folder]
    ```bash
-   cd sistem-arsip-budaya
+   cd [folder]
    ```
-3. Tambahkan izin eksekusi file `arsip_budaya.sh`:
+3. Tambahkan izin eksekusi file `arsipbudaya.sh`:
    ```bash
-   chmod +x arsip_budaya.sh
+   chmod +x arsipbudaya.sh
    ```
 4. Jalankan skrip dengan perintah:
    ```bash
-   ./arsip_budaya.sh
-   ```
-   atau
-   ```bash
-   bash arsip_budaya.sh
+   ./arsipbudaya.sh
    ```
 
 ## Fitur Utama
@@ -41,26 +37,14 @@ Skrip ini dibuat untuk memenuhi tugas kelompok proyek mata kuliah **Sistem Opera
 - `public_key.pem`: Kunci publik DSA untuk verifikasi *signature*.
 
 ## Prasyarat
-- Sistem operasi Linux berbasis Debian (contoh: Ubuntu) dengan *desktop environment*.
+- Sistem operasi Linux *desktop environment*.
 - Dependensi:
   - `zenity`: Untuk antarmuka grafis.
   - `openssl`: Untuk pembuatan kunci DSA dan *digital signature*.
   - `sha256sum`: Untuk hashing password.
 - Instal dependensi:
   ```bash
-  sudo apt install zenity openssl
-  ```
-
-## Catatan
-- File kunci (`private_key.pem`, `public_key.pem`) dan data sensitif (`akun.txt`) dibuat otomatis saat skrip pertama kali dijalankan.
-- Lindungi file sensitif dari akses tidak sah.
-- Contoh format data di `arsipbudaya.csv`:
-  ```
-  Tari Saman,Tarian tradisional dari Aceh,Aceh,Dibawakan dalam acara adat,Seni Tari
-  ```
-- Contoh *signature* di `signaturebudaya.txt`:
-  ```
-  MEUCIQDqN... (base64 digital signature)
+  sudo apt-get install zenity openssl
   ```
 
 ## Kontributor
