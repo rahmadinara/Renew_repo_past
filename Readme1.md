@@ -1,5 +1,6 @@
 # Sistem Arsip Budaya Lokal Berbasis Linux Bash Shell
 **Perlindungan Arsip Digital Budaya Lokal Menggunakan Bash Shell Linux untuk Keamanan dan Pelestarian Warisan**
+
 Skrip bash ini berfungsi untuk mengelola arsip budaya lokal dengan fitur otentikasi pengguna, verifikasi, penambahan, dan penghapusan data budaya menggunakan *digital signature* berbasis algoritma DSA. Skrip ini menggunakan *Zenity* untuk antarmuka grafis dan *OpenSSL* untuk keamanan. Skrip ini hanya dapat dijalankan pada sistem operasi Linux.
 
 Skrip ini dibuat untuk memenuhi tugas kelompok proyek mata kuliah **Sistem Operasi Jaringan** Semester 2, Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada di bawah pengawasan Dosen Pengampu **Ir. Yuris Mulya Saputra, S.T., M.Sc., Ph.D.**
